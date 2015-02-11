@@ -205,11 +205,11 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="zenburn"
+let g:colors_name="uddevalla"
 
 hi Boolean         guifg=#dca3a3                              ctermfg=181
 hi Character       guifg=#dca3a3 gui=bold                     ctermfg=181 cterm=bold
-hi Comment         guifg=#7f9f7f gui=italic                   ctermfg=108
+hi Comment         guifg=#aaaaaa gui=italic                   ctermfg=108
 hi Conditional     guifg=#f0dfaf gui=bold                     ctermfg=223 cterm=bold
 hi Constant        guifg=#dca3a3 gui=bold                     ctermfg=181 cterm=bold
 hi Cursor          guifg=#000d18 guibg=#8faf9f gui=bold       ctermfg=233 ctermbg=109 cterm=bold
@@ -226,10 +226,10 @@ hi Exception       guifg=#c3bf9f gui=bold                     ctermfg=249 cterm=
 hi Float           guifg=#c0bed1                              ctermfg=251
 hi FoldColumn      guifg=#93b3a3 guibg=#3f4040
 hi Folded          guifg=#93b3a3 guibg=#3f4040
-hi Function        guifg=#efef8f                              ctermfg=228
-hi Identifier      guifg=#efdcbc                              ctermfg=223 cterm=none
+hi Function        guifg=#fc5750                              ctermfg=228
+hi Identifier      guifg=#a4ba30                              ctermfg=223 cterm=none
 hi IncSearch       guifg=#f8f893 guibg=#385f38                ctermfg=228 ctermbg=23
-hi Keyword         guifg=#f0dfaf gui=bold                     ctermfg=223 cterm=bold
+hi Keyword         guifg=#ef8861 gui=bold                     ctermfg=223 cterm=bold
 hi Macro           guifg=#ffcfaf gui=bold                     ctermfg=223 cterm=bold
 hi ModeMsg         guifg=#ffcfaf gui=none                     ctermfg=223 cterm=none
 hi MoreMsg         guifg=#ffffff gui=bold                     ctermfg=231 cterm=bold
