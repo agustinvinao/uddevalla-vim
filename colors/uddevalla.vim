@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer:   Jani Nurminen <slinky@iki.fi>
-" URL:          http://kippura.org/zenburnpage/
+" URL:          http://kippura.org/uddevallapage/
 " License:      GNU GPL <http://www.gnu.org/licenses/gpl.html>
 "
 " Nothing too fancy, just some alien fruit salad to keep you in the zone.
@@ -14,17 +14,17 @@
 " To install, copy to ~/.vim/colors directory.
 "
 " Alternatively, you can use Vimball installation:
-"     vim zenburn.vba
+"     vim uddevalla.vba
 "     :so %
 "     :q
 "
 " For details, see :help vimball
 "
-" After installation, use it with :colorscheme zenburn.
+" After installation, use it with :colorscheme uddevalla.
 " See also :help syntax
 "
 " Credits:
-"  - Jani Nurminen - original Zenburn, maintainer
+"  - Jani Nurminen - original uddevalla, maintainer
 "  - Steve Hall & Cream posse - higher-contrast Visual selection
 "  - Kurt Maier - 256 color console coloring, low and high contrast toggle,
 "                 bug fixing
@@ -38,9 +38,9 @@
 "  - Andrew Wagner - noted the CursorColumn bug (guifg was unintentionally set),
 "                    unify CursorColumn colour
 "  - Martin Langasek - clarify the license, whitespace fixes
-"  - Marcin Szamotulski - support autocomplete for Zenburn configuration
+"  - Marcin Szamotulski - support autocomplete for uddevalla configuration
 "                         parameters
-"  - Clayton Parker (claytron) - Convinced by Kurt Maier to use Zenburn. Point
+"  - Clayton Parker (claytron) - Convinced by Kurt Maier to use uddevalla. Point
 "    out issues with LineNr, fix directory styles, and their usage in MacVim.
 "  - Paweł Piekarski - Spotted bad FoldColumn and TabLine. Made better 
 "                      FoldColumn colors, fixed TabLine colors.
@@ -51,21 +51,21 @@
 " CONFIGURABLE PARAMETERS:
 "
 " You can use the default (don't set any parameters), or you can
-" set some parameters to tweak the Zenburn colours.
+" set some parameters to tweak the uddevalla colours.
 "
 " To use them, put them into your .vimrc file before loading the color scheme,
 " example:
-"    let g:zenburn_high_Contrast=1
-"    colors zenburn
+"    let g:uddevalla_high_Contrast=1
+"    colors uddevalla
 "
-" You can also do ":let g:zenburn" then hit Ctrl-d or Tab to scroll through the
+" You can also do ":let g:uddevalla" then hit Ctrl-d or Tab to scroll through the
 " list of configurable parameters.
 "
 " * You can now set a darker background for bright environments. To activate, use:
-"      let g:zenburn_high_Contrast = 1
+"      let g:uddevalla_high_Contrast = 1
 "
 " * For transparent terminals set the background to black with:
-"      let g:zenburn_transparent = 1
+"      let g:uddevalla_transparent = 1
 "
 " * For example, Vim help files uses the Ignore-group for the pipes in tags
 "   like "|somelink.txt|". By default, the pipes are not visible, as they
@@ -73,39 +73,39 @@
 "   set the following parameter to 1. Warning, it might make some syntax files
 "   look strange.
 "
-"      let g:zenburn_color_also_Ignore = 1
+"      let g:uddevalla_color_also_Ignore = 1
 "
 " * To get more contrast to the Visual selection, use
 "
-"      let g:zenburn_alternate_Visual = 1
+"      let g:uddevalla_alternate_Visual = 1
 "
 "   Note: this is enabled only if the old-style Visual
-"   if used, see g:zenburn_old_Visual
+"   if used, see g:uddevalla_old_Visual
 "
 " * To use alternate colouring for Error message, use
 "
-"      let g:zenburn_alternate_Error = 1
+"      let g:uddevalla_alternate_Error = 1
 "
 " * The new default for Include is a duller orange. To use the original
 "   colouring for Include, use
 "
-"      let g:zenburn_alternate_Include = 1
+"      let g:uddevalla_alternate_Include = 1
 "
 " * To disable underlining for Labels, use
 "
-"      let g:zenburn_disable_Label_underline = 1
+"      let g:uddevalla_disable_Label_underline = 1
 "
 " * Work-around to a Vim bug, it seems to misinterpret ctermfg and 234 and 237
 "   as light values, and sets background to light for some people. If you have
 "   this problem, use:
 "
-"      let g:zenburn_force_dark_Background = 1
+"      let g:uddevalla_force_dark_Background = 1
 "
 " * By default the CursorColumn is of a lighter colour. I find it more readable
 "   that way, but some people may want to align it with the darker CursorLine
 "   color, for visual uniformity. To do so, use:
 "
-"      let g:zenburn_unified_CursorColumn = 1
+"      let g:uddevalla_unified_CursorColumn = 1
 "
 "   Note: you can ignore this unless you use
 "   ":set cursorline cursorcolumn", since otherwise the effect won't be
@@ -116,11 +116,11 @@
 "   especially if you use line numbers. If you wish to use the 
 "   old Visual coloring, use
 "
-"      let g:zenburn_old_Visual = 1
+"      let g:uddevalla_old_Visual = 1
 "
 "   Default is to use the new Visual.
 "
-"  * EXPERIMENTAL FEATURE: Zenburn would like to support TagHighlight
+"  * EXPERIMENTAL FEATURE: uddevalla would like to support TagHighlight
 "    (an evolved ctags-highlighter) by Al Budden (homepage:
 "    http://www.cgtk.co.uk/vim-scripts/taghighlight).
 "    Current support status is broken: there is no automatic detection of
@@ -128,7 +128,7 @@
 "    support for Python. If you are a user of TagHighlight and want to help,
 "    please enable:
 "
-"      let g:zenburn_enable_TagHighlight=1
+"      let g:uddevalla_enable_TagHighlight=1
 "
 "    and improve the corresponding block at the end of the file.
 "
@@ -136,9 +136,9 @@
 "
 " * To turn the parameter(s) back to defaults, use UNLET or set them to 0:
 "
-"      unlet g:zenburn_alternate_Include
+"      unlet g:uddevalla_alternate_Include
 "   or 
-"      let g:zenburn_alternate_Include = 0
+"      let g:uddevalla_alternate_Include = 0
 "
 "
 " That's it, enjoy!
@@ -153,48 +153,48 @@ if ! has("gui_running") && &t_Co <= 255
 endif
 
 " Set defaults, but keep any parameters already set by the user
-if ! exists("g:zenburn_high_Contrast")
-    let g:zenburn_high_Contrast = 0
+if ! exists("g:uddevalla_high_Contrast")
+    let g:uddevalla_high_Contrast = 0
 endif
 
-if ! exists("g:zenburn_transparent")
-    let g:zenburn_transparent = 0
+if ! exists("g:uddevalla_transparent")
+    let g:uddevalla_transparent = 0
 endif
 
-if ! exists("g:zenburn_color_also_Ignore")
-    let g:zenburn_color_also_Ignore = 0
+if ! exists("g:uddevalla_color_also_Ignore")
+    let g:uddevalla_color_also_Ignore = 0
 endif
 
-if ! exists("g:zenburn_alternate_Error")
-    let g:zenburn_alternate_Error = 0
+if ! exists("g:uddevalla_alternate_Error")
+    let g:uddevalla_alternate_Error = 0
 endif
 
-if ! exists("g:zenburn_force_dark_Background")
-    let g:zenburn_force_dark_Background = 0
+if ! exists("g:uddevalla_force_dark_Background")
+    let g:uddevalla_force_dark_Background = 0
 endif
 
-if ! exists("g:zenburn_alternate_Visual")
-    let g:zenburn_alternate_Visual = 0
+if ! exists("g:uddevalla_alternate_Visual")
+    let g:uddevalla_alternate_Visual = 0
 endif
 
-if ! exists("g:zenburn_alternate_Include")
-    let g:zenburn_alternate_Include = 0
+if ! exists("g:uddevalla_alternate_Include")
+    let g:uddevalla_alternate_Include = 0
 endif
 
-if ! exists("g:zenburn_disable_Label_underline")
-    let g:zenburn_disable_Label_underline = 0
+if ! exists("g:uddevalla_disable_Label_underline")
+    let g:uddevalla_disable_Label_underline = 0
 endif
 
-if ! exists("g:zenburn_unified_CursorColumn")
-    let g:zenburn_unified_CursorColumn = 0
+if ! exists("g:uddevalla_unified_CursorColumn")
+    let g:uddevalla_unified_CursorColumn = 0
 endif
 
-if ! exists("g:zenburn_old_Visual")
-    let g:zenburn_old_Visual = 0
+if ! exists("g:uddevalla_old_Visual")
+    let g:uddevalla_old_Visual = 0
 endif
 
-if ! exists("g:zenburn_enable_TagHighlight")
-    let g:zenburn_enable_TagHighlight = 0
+if ! exists("g:uddevalla_enable_TagHighlight")
+    let g:uddevalla_enable_TagHighlight = 0
 endif
 
 " -----------------------------------------------
@@ -205,7 +205,7 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="uddevalla"
+let g:colors_name="Uddevalla"
 
 hi Boolean         guifg=#dca3a3                              ctermfg=181
 hi Character       guifg=#dca3a3 gui=bold                     ctermfg=181 cterm=bold
@@ -270,13 +270,13 @@ hi SpellCap   guisp=#6c6c9c guifg=#8c8cbc  ctermfg=103 ctermbg=237
 hi SpellRare  guisp=#bc6c9c guifg=#bc8cbc  ctermfg=139 ctermbg=237
 hi SpellLocal guisp=#7cac7c guifg=#9ccc9c  ctermfg=151 ctermbg=237
 
-if exists("g:zenburn_high_Contrast") && g:zenburn_high_Contrast
+if exists("g:uddevalla_high_Contrast") && g:uddevalla_high_Contrast
     " use new darker background
     hi Normal        guifg=#dcdccc guibg=#1f1f1f           ctermfg=188 ctermbg=234
     hi ColorColumn   guibg=#33332f                         ctermbg=235
     hi CursorLine    guibg=#121212 gui=bold                ctermbg=233 cterm=none
     hi CursorLineNr  guifg=#f2f3bb guibg=#161616           ctermfg=229 ctermbg=233
-    if exists("g:zenburn_unified_CursorColumn") && g:zenburn_unified_CursorColumn
+    if exists("g:uddevalla_unified_CursorColumn") && g:uddevalla_unified_CursorColumn
         hi CursorColumn  guibg=#121212 gui=bold            ctermbg=233 cterm=none
     else
         hi CursorColumn  guibg=#2b2b2b                     ctermbg=235 cterm=none
@@ -299,7 +299,7 @@ else
     hi ColorColumn   guibg=#484848                         ctermbg=238
     hi CursorLine    guibg=#434443                         ctermbg=238 cterm=none
     hi CursorLineNr  guifg=#d2d39b guibg=#262626           ctermfg=230 ctermbg=235
-    if exists("g:zenburn_unified_CursorColumn") && g:zenburn_unified_CursorColumn
+    if exists("g:uddevalla_unified_CursorColumn") && g:uddevalla_unified_CursorColumn
         hi CursorColumn  guibg=#434343                     ctermbg=238 cterm=none
     else
         hi CursorColumn  guibg=#4f4f4f                     ctermbg=239 cterm=none
@@ -320,7 +320,7 @@ else
     hi StatusLine    ctermbg=144
 endif
 
-if exists("g:zenburn_force_dark_Background") && g:zenburn_force_dark_Background
+if exists("g:uddevalla_force_dark_Background") && g:uddevalla_force_dark_Background
     " Force dark background, because of a bug in VIM:  VIM sets background
     " automatically during "hi Normal ctermfg=X"; it misinterprets the high
     " value (234 or 237 above) as a light color, and wrongly sets background to
@@ -328,7 +328,7 @@ if exists("g:zenburn_force_dark_Background") && g:zenburn_force_dark_Background
     set background=dark
 endif
 
-if exists("g:zenburn_transparent") && g:zenburn_transparent
+if exists("g:uddevalla_transparent") && g:uddevalla_transparent
     hi Normal             ctermbg=0     guibg=#000000
     hi Statement          ctermbg=NONE
     hi Title              ctermbg=NONE
@@ -340,8 +340,8 @@ if exists("g:zenburn_transparent") && g:zenburn_transparent
     hi LineNr             ctermbg=NONE
 endif
 
-if exists("g:zenburn_old_Visual") && g:zenburn_old_Visual
-    if exists("g:zenburn_alternate_Visual") && g:zenburn_alternate_Visual
+if exists("g:uddevalla_old_Visual") && g:uddevalla_old_Visual
+    if exists("g:uddevalla_alternate_Visual") && g:uddevalla_alternate_Visual
         " Visual with more contrast, thanks to Steve Hall & Cream posse
         " gui=none fixes weird highlight problem in at least GVim 7.0.66, thanks to Kurt Maier
         hi Visual          guifg=#000000 guibg=#71d3b4 gui=none  ctermfg=16  ctermbg=79  cterm=none
@@ -353,7 +353,7 @@ if exists("g:zenburn_old_Visual") && g:zenburn_old_Visual
     endif
 else
     " new Visual style
-    if exists("g:zenburn_high_Contrast") && g:zenburn_high_Contrast
+    if exists("g:uddevalla_high_Contrast") && g:uddevalla_high_Contrast
         " high contrast
         "hi Visual        guibg=#304a3d
         "hi VisualNos     guibg=#304a3d
@@ -361,7 +361,7 @@ else
         "although i like the green..!
         hi Visual        guibg=#0f0f0f  ctermbg=232
         hi VisualNOS     guibg=#0f0f0f  ctermbg=232
-        if exists("g:zenburn_transparent") && g:zenburn_transparent
+        if exists("g:uddevalla_transparent") && g:uddevalla_transparent
             hi Visual ctermbg=235
         endif
     else
@@ -371,15 +371,15 @@ else
     endif
 endif
 
-if exists("g:zenburn_alternate_Error") && g:zenburn_alternate_Error
+if exists("g:uddevalla_alternate_Error") && g:uddevalla_alternate_Error
     " use more jumpy Error
     hi Error    guifg=#e37170 guibg=#664040 gui=bold  ctermfg=210 ctermbg=52 cterm=bold
 else
-    " default is something more zenburn-compatible
+    " default is something more uddevalla-compatible
     hi Error    guifg=#e37170 guibg=#3d3535 gui=bold  ctermfg=167 ctermbg=236 cterm=bold
 endif
 
-if exists("g:zenburn_alternate_Include") && g:zenburn_alternate_Include
+if exists("g:uddevalla_alternate_Include") && g:uddevalla_alternate_Include
     " original setting
     hi Include  guifg=#ffcfaf gui=bold                ctermfg=223 cterm=bold
 else
@@ -387,16 +387,16 @@ else
     hi Include  guifg=#dfaf8f gui=bold                ctermfg=180 cterm=bold
 endif
 
-if exists("g:zenburn_disable_Label_underline") && g:zenburn_disable_Label_underline
+if exists("g:uddevalla_disable_Label_underline") && g:uddevalla_disable_Label_underline
     hi Label    guifg=#dfcfaf                         ctermfg=187
 else
     hi Label    guifg=#dfcfaf gui=underline           ctermfg=187 cterm=underline
 endif
 
-if exists("g:zenburn_color_also_Ignore") && g:zenburn_color_also_Ignore
+if exists("g:uddevalla_color_also_Ignore") && g:uddevalla_color_also_Ignore
     " color the Ignore groups
     " note: if you get strange coloring for your files, turn this off (unlet)
-    if exists("g:zenburn_high_Contrast") && g:zenburn_high_Contrast
+    if exists("g:uddevalla_high_Contrast") && g:uddevalla_high_Contrast
         hi Ignore                ctermfg=238
     else
         hi Ignore guifg=#545a4f  ctermfg=240
@@ -406,12 +406,12 @@ endif
 " EXPERIMENTAL TagHighlight support
 " link/set sensible defaults here;
 "
-" For now I mostly link to subset of Zenburn colors, the linkage is based
+" For now I mostly link to subset of uddevalla colors, the linkage is based
 " on appearance, not semantics. In later versions I might define more new colours.
 "
 " HELP NEEDED to make this work properly.
 
-if exists("g:zenburn_enable_TagHighlight") && g:zenburn_enable_TagHighlight
+if exists("g:uddevalla_enable_TagHighlight") && g:uddevalla_enable_TagHighlight
         " CTag support may vary, but the first step is to start using it so
         " we can fix it!
         "

@@ -1,2 +1,2 @@
-colors/zenburn.vim
+colors/uddevalla.vim
 
